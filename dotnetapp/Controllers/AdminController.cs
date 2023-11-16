@@ -20,6 +20,22 @@ namespace dotnetapp.Controllers
             _context = context;
         }
 
+        public IActionResult GetPlayers(){
+            return Ok();
+        }
+
+        public IActionResult GetTeams(){
+            return Ok();
+        }
+
+        public IActionResult PutPlayer(int id){
+            return Ok();
+        }
+
+        public IActionResult DeletePalyer(){
+            return Ok();
+        }
+
         
     }
 }

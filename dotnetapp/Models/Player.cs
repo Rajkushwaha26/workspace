@@ -12,11 +12,11 @@ namespace dotnetapp.Models
         [Required]
         public string? Name { get; set; }
 
-        //public int TeamId {get;set;}
+        public int Age {get;set;}
         public string? Category { get; set; }
 
         [Range(0,double.MaxValue)]
-        public decimal BiddingAmount { get; set; }
+        public decimal BiddingPrice { get; set; }
 
       
 
