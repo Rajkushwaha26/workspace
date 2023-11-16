@@ -32,7 +32,7 @@ namespace dotnetapp.Controllers
             return Ok();
         }
 
-        public IActionResult DeletePalyer(){
+        public IActionResult DeletePlayer(int id){
             return Ok();
         }
 
