@@ -11,5 +11,7 @@ namespace dotnetapp.Models
         }
 
         // Add DbSet properties for other entities as needed
+        public DbSet<Player>Players {get;set;}
+        public DbSet<Team> Teams {get;set;}
     }
 }
