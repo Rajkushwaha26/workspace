@@ -42,13 +42,31 @@ namespace dotnetapp.Controllers
             if(pl!=null){
                 pl.Age=player.Age;
                 pl.Name=player.Name;
-                plock.T
+                pl.TeamId=player.TeamId;
+                pl.Category=player.Category;
+                pl.BiddingPrice=player.BiddingPrice;
+                _context.Update(pl);
+                _context.SaveChanges();
+                return Ok();
+            }else{
+                return NotFound();
+
             }
-            return Ok();
+            
         }
 
+        [HttpDelete]
+        [Route("DeletePlayer")]
         public IActionResult DeletePlayer(int id){
-            return Ok();
+            var pl = _context.Players.Find(id);
+            if(pl!=null){
+                _context.Players.Remove(pl);
+                _context.SaveChanges();
+                return Ok();
+            }else{
+                return NotFound();
+            }
+            
         }
 
         
