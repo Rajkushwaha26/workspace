@@ -8,9 +8,8 @@ using dotnetapp.Models;
 
 namespace dotnetapp.Controllers
 {
-
-    
-
+    [ApiController]
+    [Route("api/[controller]")]
     public class AdminController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -35,7 +34,7 @@ namespace dotnetapp.Controllers
             return Ok();
         }
 
-        [Route("PutPlayer")]
+        [Route("PutPlayer/{id}")]
         [HttpPut]
         public IActionResult PutPlayer(int id, Player player){
             var pl = _context.Players.Find(id);
@@ -56,7 +55,7 @@ namespace dotnetapp.Controllers
         }
 
         [HttpDelete]
-        [Route("DeletePlayer")]
+        [Route("DeletePlayer/{id}")]
         public IActionResult DeletePlayer(int id){
             var pl = _context.Players.Find(id);
             if(pl!=null){
