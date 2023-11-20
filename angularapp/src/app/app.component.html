@@ -1,80 +1,26 @@
-<app-palyer></app-palyer>
-
-<form #employeeForm="ngForm" (ngSubmit)="RegisterEmployee(employeeForm);">
-  <div class="panel panel-primary">
-      <div class="panel-heading">
-          <h3 class="panel-title">Student Registration</h3>
-      </div>
-      <div class="panel-group">
-          
-          
-          <label for="firstName">First Name:</label>
-          <input id="firstName" type="text" class="form-control" name="firstName" ngModel required #firstName="ngModel">
-      </div>
-      <div>
-          <small *ngIf="firstName.touched && !firstName.valid" class="alert alert-danger">First Name is required.</small>
-      </div>
-      <div class="panel-group">
-          <label for="LastName">Last Name:</label>
-          <input id="LastName" type="text" class="form-control" name="LastName" ngModel required #LastName="ngModel">
-      </div>
-      <div>
-          <small *ngIf="LastNametouched && !LastNamevalid" class="alert alert-danger">Last Name is required.</small>
-      </div>
-      <div class="panel-group">
-          <label>Gender:</label>
-          <div class="form-control">
-              <label class="radio-inline">
-                  <input type="radio" name="gender" value="male" ngModel required >
-                  Male
-              </label>
-              <label class="radio-inline">
-                  <input type="radio" name="gender" value="female" ngModel>
-                  Female
-              </label>
-          </div>
-          
-      </div>
-      <div class="panel-group">
-          <label for="Email">Email:</label>
-          <input id="Email" type="text" class="form-control" name="Email" ngModel required #Email="ngModel">
-      </div>
-      <div>
-          <small *ngIf="Email.touched && !Email.valid" class="alert alert-danger">Email is required.</small>
-      </div>
-      <div class="form-group">
-          <div class="form-control">
-              <label class="checkbox-inline">
-                  <input type="checkbox" name="isAccept">
-                  Accept Terms & Conditions
-              </label>
-          </div>
-
-
-      </div>
-      <div class="panel-group">
-          <label for="Address">Address:</label>
-          <input id="Address" type="text" class="form-control" name="Address" ngModel required #Address="ngModel">
-      </div>
-      <div>
-          <small *ngIf="Address.touched && !Address.valid" class="alert alert-danger">Address is required.</small>
-      </div>
-      <div class="panel-group">
-          <label for="Phone">Phone:</label>
-          <input id="Phone" type="text" class="form-control" name="Phone" ngModel required #Phone="ngModel">
-      </div>
-      <div>
-          <small *ngIf="Phone.touched && !firstName.valid" class="alert alert-danger">Phone is required.</small>
-      </div>
-      <div class="panel-footer">
-          <button class="btn btn-primary" type="submit">Submit</button>
-      </div>
-  </div>
-</form>
-
-
-
-
-
-
-<router-outlet></router-outlet>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Login</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="example-form">
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+            <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+        <td><mat-form-field class="example-full-width">
+          <input matInput placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
+        </mat-form-field></td>
+      </tr></table>
+    </form>
+    <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="login()" color="primary">Login</button>
+  </mat-card-actions>
+</mat-card>
