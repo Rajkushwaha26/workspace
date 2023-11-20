@@ -13,7 +13,8 @@ import { PalyerComponent } from './palyer/palyer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
    
   ],
   providers: [],
