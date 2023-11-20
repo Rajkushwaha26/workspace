@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+//import {PalyerComponent} from '../palyer';
 
 @Component({
   selector: 'app-palyer',
@@ -7,16 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PalyerComponent implements OnInit {
 
-  constructor() { }
-  id:number
+  
+  teamid:number
   name:string
   age:number
-  biddingprice:number
-  category:
+  biddingPrice:number
+  category:string
 
-  team:any[]=[
-    {id}
+  teams:any[]=[
+    {teamid:1,name:'Raj',age:23,category:'Circket',biddingPrice:100}
   ]
+
+  constructor() { }
 
   ngOnInit(): void {
   }

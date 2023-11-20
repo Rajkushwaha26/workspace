@@ -9,10 +9,12 @@ import { PalyerComponent } from './palyer/palyer.component';
   declarations: [
     AppComponent,
     PalyerComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
