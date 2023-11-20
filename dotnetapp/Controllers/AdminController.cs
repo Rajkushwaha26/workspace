@@ -8,8 +8,8 @@ using dotnetapp.Models;
 
 namespace dotnetapp.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
+    //[ApiController]
+    //[Route("api/[controller]")]
     public class AdminController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -24,6 +24,10 @@ namespace dotnetapp.Controllers
         public IActionResult GetPlayers(){
             var plist = _context.Players.ToList();
             return Ok(plist);
+        }
+
+        public IActionResult GetTeams(){
+            var tlist = _context.
         }
 
         [HttpPost]
