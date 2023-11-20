@@ -26,8 +26,11 @@ namespace dotnetapp.Controllers
             return Ok(plist);
         }
 
+        [HttpGet]
+        [Route("GetTeams")]
         public IActionResult GetTeams(){
-            var tlist = _context.
+            var tlist = _context.Teams.ToList();
+            return Ok(tlist);
         }
 
         [HttpPost]
