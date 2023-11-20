@@ -1,0 +1,25 @@
+<p>palyer works!</p>
+<H3>Palyer List</H3>
+<table style="text-align: center;" class="table"></table>
+<thead>
+    <tr>
+        <th>TeamId</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Category</th>
+        <th>BiddingPrice</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let t for team">
+        <td>{{t.teamId}}</td>
+        <td>{{t.name}}</td>
+        <td>{{t.age}}</td>
+        <td>{{t.category}}</td>
+        <td>{{t.biddingPrice}}</td>
+    </tr>
+
+
+</tbody>
+
+</table>
