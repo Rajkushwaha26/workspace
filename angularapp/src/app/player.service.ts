@@ -27,7 +27,7 @@ export class PlayerService {
 
   //create
   AddPlayer(playerdata:IPlayer):Observable<IPlayer>{
-    return this.http.post<IPlayer>(this.url+'/PostPlayers',playerdata,this.httpOptions);
+    return this.http.post<IPlayer>(this.url+'/PostPlayers',playerdata,this.httpOptions)
   }
 
   //editPlayer
