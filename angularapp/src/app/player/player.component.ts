@@ -8,6 +8,7 @@ import { PlayerService } from '../player.service';
 })
 export class PlayerComponent implements OnInit {
   items:any[];
+  players: { id: number; name: string; age: number; category: string; biddingPrice: number; }[];
   constructor(private U:PlayerService) { }
 
   ngOnInit(): void {

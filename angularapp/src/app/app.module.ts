@@ -13,6 +13,7 @@ import { FindplayerComponent } from './findplayer/findplayer.component';
 import { CreateComponent } from './create/create.component';
 import { RegisterComponent } from './services/register/register.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
