@@ -16,17 +16,31 @@ export class PlayerService {
 
   //GetAllPlyers(Dispaly)
   GetAllPlayers():Observable<IPlayer[]>{
-    return this.httpClient.get<IPlayer[]>(`${this.url}/GetPlayers`)
+    return this.http.get<IPlayer[]>(`${this.url}/GetPlayer`)
   }
-
-
-  // //Create(Dispaly)
-  // AddPlayers(playerdata:IPlayer):Observable<IPlayer>{
-  //   return this.http.post<IPlayer>(this.url+'/PostPalyers');
-  // }
-
+  player:IPlayer
+//id
   GetPlayerById(id:number):Observable<IPlayer>
   {
-    return this.httpClient.get<IPlayer>(this.url+'/ListMovies/'+id)
+    return this.http.get<IPlayer>(this.url+'/GetPlayer/'+id)
   }
+
+  //create
+  AddPlayer(playerdata:IPlayer):Observable<IPlayer>{
+    return this.http.post<IPlayer>(this.url+'/PostPlayers',playerdata,this.httpOptions);
+  }
+
+  //editPlayer
+  EditPlayer(playerdata:IPlayer):Observable<IPlayer>{
+    return this.http.put<IPlayer>(this.url+'/PutPlayer'+playerdata.id,playerdata,this.httpOptions)
+  }
+
+  //deletePlayer
+  DeletePlayer(id:number):Observable<IPlayer>{
+    const url=`${this.url}/DeletePlayer/${id}`;
+    return this.http.delete<IPlayer>(url);
+  }
+
+
+
 }
