@@ -17,13 +17,9 @@ export class PlayerService {
     return this.http.get<any[]>(this.url+'/GetPlayers');
   }
 
-  // GetPlyersById(Dispaly)
-  // GetPlyersById():Observable<any[]>{
-  //   return this.http.get<any[]>(this.url+'/GetPlayers');
-  // }
 
-  //Create(Dispaly)
-  AddPlayers():Observable<any[]>{
-    return this.http.get<any[]>(this.url+'/GetPlayers');
-  }
+  // //Create(Dispaly)
+  // AddPlayers(playerdata:IPlayer):Observable<IPlayer>{
+  //   return this.http.post<IPlayer>(this.url+'/PostPalyers');
+  // }
 }
