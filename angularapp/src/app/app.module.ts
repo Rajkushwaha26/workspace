@@ -11,6 +11,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { DeleteComponent } from './delete/delete.component';
 import { FindplayerComponent } from './findplayer/findplayer.component';
 import { CreateComponent } from './create/create.component';
+import { RegisterComponent } from './services/register/register.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CreateComponent } from './create/create.component';
     DeleteComponent,
     FindplayerComponent,
     CreateComponent,
+    RegisterComponent,
     
     
   ],
