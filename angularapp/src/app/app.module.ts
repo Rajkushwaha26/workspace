@@ -7,19 +7,22 @@ import { PlayerComponent } from './player/player.component';
 import { TeamComponent } from './team/team.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlayerComponent,
     TeamComponent,
-    LoginComponent
+    LoginComponent,
+    
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
     
    
   ],

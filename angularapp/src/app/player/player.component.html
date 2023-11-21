@@ -4,20 +4,25 @@
 <table style="text-align: center; align-items: center;" class="table">
     <thead>
         <tr>
-            <th>TeamId</th>
+            <th>Id</th>
             <th>Name</th>
             <th>Age</th>
+            <th>TeamId</th>
             <th>Category</th>
             <th>BiddingPrice</th>
+            <th>Teams</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let t of teams">
-            <td>{{t.teamid}}</td>
+        <tr *ngFor="let t of item">
+            <td>{{t.id}}</td>
             <td>{{t.name}}</td>
             <td>{{t.age}}</td>
-            <td>{{t.biddingPrice}}</td>
+            <td>{{t.teamId}}</td>
             <td>{{t.category}}</td>
+            <td>{{t.biddingPrice}}</td>
+            <td>{{t.teams}}</td>
+            
             
   
         </tr>

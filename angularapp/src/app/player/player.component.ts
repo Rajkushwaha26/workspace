@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PlayerService } from '../player.service';
 
 @Component({
   selector: 'app-player',
@@ -6,20 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./player.component.css']
 })
 export class PlayerComponent implements OnInit {
-  teamid:number
-  name:string
-  age:number
-  biddingPrice:number
-  category:string
-
-  teams:any[]=[
-    {teamid:1,name:'Raj',age:23,category:'Circket',biddingPrice:100}
-  ]
-
-
-  constructor() { }
+  item:any[];
+  
+  constructor(private U:PlayerService) { }
 
   ngOnInit(): void {
+    this.loadItem();
+  }
+  loadItem():void{
+    this.U.GetAllPlayers().subscribe(data=>{
+      this.item=data;
+    })
   }
 
 }
