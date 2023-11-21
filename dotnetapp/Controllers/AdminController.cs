@@ -76,7 +76,7 @@ namespace dotnetapp.Controllers
          }
  
         [HttpDelete]
-        [Route("DeletePlayer")]
+        [Route("DeletePlayer/{id}")]
         public IActionResult DeletePlayer(int id)
         {
             var playerList=_context.Players.Find(id);
