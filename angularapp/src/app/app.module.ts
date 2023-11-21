@@ -8,6 +8,8 @@ import { TeamComponent } from './team/team.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { DeleteComponent } from './delete/delete.component';
+import { FindplayerComponent } from './findplayer/findplayer.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     PlayerComponent,
     TeamComponent,
     LoginComponent,
+    DeleteComponent,
+    FindplayerComponent,
     
     
   ],
