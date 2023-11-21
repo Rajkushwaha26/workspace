@@ -16,8 +16,8 @@ export class PlayerComponent implements OnInit {
   }
   loadItem():void{
     this.U.GetAllPlayers().subscribe(data=>{
-      this.item=data;
-    })
+      this.item.push(...data);
+    });
   }
 
 }

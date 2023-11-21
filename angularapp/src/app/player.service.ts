@@ -13,6 +13,6 @@ export class PlayerService {
 
   //GetAllPlyers(Dispaly)
   GetAllPlayers():Observable<any[]>{
-    return this.http.get<any[]>(this.url+'/get');
+    return this.http.get<any[]>(this.url+'/GetPlayers');
   }
 }
