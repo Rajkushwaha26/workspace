@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using dotnetapp.Models;
-using Microsoft.AspNetCore.Cors;
 
 
 
@@ -11,6 +10,18 @@ builder.Services.AddControllers();
 
 builder.Services.AddDbContext<ApplicationDbContext>(Options=>{
     Options.UseSqlServer(builder.Configuration.GetConnectionString("Dbconn"));
+});
+
+
+//Cors
+builder.Services.AddCors(options=>{
+    options.AddPolicy("AllowAllOrigins",
+    builder=>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
 });
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -25,6 +36,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+
+app.UseCors("AllowAllOrigins");
 
 app.UseHttpsRedirection();
 
