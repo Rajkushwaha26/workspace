@@ -1,13 +1,20 @@
-<p>findplayer works!</p>
-<h3>{{moviedata.name}} Details</h3>
-<div style="background-color: lime; padding-left: 20px;">
-    Id:{{playerdata.id}}<br><br>
-    Id:{{playerdata.name}}<br><br>
-    Id:{{playerdata.age}}<br><br>
-    Id:{{playerdata.teamId}}<br><br>
-    Id:{{playerdata.category}}<br><br>
-    Year:{{playerdata.yearRelease}}<br><br>
-    Ratings:{{playerdata.rating}}
-</div>
-<br><br>
-<a [routerLink]="['/findplayer']">Find by Id</a>
+<form #playerform="ngForm" (ngSubmit)="getPlayerDetails(playerdata)">
+    <div>
+        <label for="id">Player ID:</label>
+        <input type="number" id="id" name="id" [(ngModel)]="id"/>
+        <button type="submit">Submit</button>
+    </div>
+    </form>
+    
+    <div *ngIf="isReady">
+        <div class="container col-4">
+        <h2 style="text-align:center">Player Details</h2>
+    
+        <p>Id: {{playerdata.id}}</p>
+        <p>Age: {{playerdata.name}}</p>
+        <p>Name: {{playerdata.age}}</p>
+        <p>TeamId: {{playerdata.teamId}}</p>
+        <p>Category: {{playerdata.category}}</p>
+        <p>BiddingPrice:{{playerdata.biddingPrice}}</p>
+        </div>
+    </div>

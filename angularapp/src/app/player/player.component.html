@@ -9,7 +9,7 @@
             <th>TeamId</th>
             <th>Category</th>
             <th>BiddingPrice</th>
-            <th>Teams</th>
+            
         </tr>
     </thead>
     <tbody>
@@ -20,7 +20,8 @@
             <td>{{t.teamId}}</td>
             <td>{{t.category}}</td>
             <td>{{t.biddingPrice}}</td>
-            <td>{{t.teams}}</td>
+            <td><button (click)="Edit()" class="btn btn-primary">Edit</button></td>
+            <td><button (click)="Delete()" class="btn btn-warning">Delete</button></td>
         </tr>
     </tbody>
 

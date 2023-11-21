@@ -11,16 +11,18 @@ export class FindplayerComponent implements OnInit {
 
   playerdata:IPlayer
   id:number
-  constructor(private playerservice:PlayerService,private ar:ActivatedRoute){}
-
-  ngOnInit() 
-  {
-    const tid=this.ar.snapshot.paramMap.get('id')
-    this.id=Number(tid)
-    this.playerservice.GetPlayerById(this.id).subscribe((data:IPlayer)=>
-    {
-   this.playerdata=data
-    })
+  isReady = false;
+ 
+  constructor(private service:PlayerService, private ar:ActivatedRoute) { }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
 
+  getPlayerDetails(p:IPlayer){
+    this.service.GetPlayerById(this.id).subscribe((data:IPlayer)=>{
+      this.playerdata=data; 
+      this.isReady= true;
+      console.log(this.playerdata);
+    })
+  }
 }

@@ -31,14 +31,13 @@ export class PlayerService {
   }
 
   //editPlayer
-  EditPlayer(playerdata:IPlayer):Observable<IPlayer>{
-    return this.http.put<IPlayer>(this.url+'/PutPlayer'+playerdata.id,playerdata,this.httpOptions)
+  EditPlayer(id:number ,playerdata:IPlayer):Observable<IPlayer>{
+    return this.http.put<IPlayer>(this.url+'/PutPlayer'+id,playerdata,this.httpOptions)
   }
 
   //deletePlayer
-  DeletePlayer(id:number):Observable<IPlayer>{
-    const url=`${this.url}/DeletePlayer/${id}`;
-    return this.http.delete<IPlayer>(url);
+  DeletePlayer(id:number,playerdata:IPlayer):Observable<IPlayer>{
+    return this.http.delete<IPlayer>(this.url+'/DeletePlayer/'+id)
   }
 
 
