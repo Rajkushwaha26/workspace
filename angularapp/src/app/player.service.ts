@@ -9,16 +9,16 @@ import { IPlayer } from '../models/data/iPlayer';
 export class PlayerService {
 
   private url='https://8080-cfdbdbcbdfacbbecabcdadeafbbdcaeafe.premiumproject.examly.io/api/Admin';
-  httpClient: any;
+  // httpClient: any;
 
   constructor(private http:HttpClient) { }
   httpOptions={headers:new HttpHeaders({'Content-type':'application/json'})}
 
   //GetAllPlyers(Dispaly)
   GetAllPlayers():Observable<IPlayer[]>{
-    return this.http.get<IPlayer[]>(`${this.url}/GetPlayer`)
+    return this.http.get<IPlayer[]>(this.url+'/GetPlayer')
   }
-  player:IPlayer
+  
 //id
   GetPlayerById(id:number):Observable<IPlayer>
   {

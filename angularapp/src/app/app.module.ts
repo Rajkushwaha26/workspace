@@ -12,6 +12,7 @@ import { DeleteComponent } from './delete/delete.component';
 import { FindplayerComponent } from './findplayer/findplayer.component';
 import { CreateComponent } from './create/create.component';
 import { RegisterComponent } from './services/register/register.component';
+import { GetdetailComponent } from './getdetail/getdetail.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { RegisterComponent } from './services/register/register.component';
     FindplayerComponent,
     CreateComponent,
     RegisterComponent,
+    GetdetailComponent,
     
     
   ],
