@@ -1,1 +1,22 @@
-<p>getdetail works!</p>
+<h2 style="align-items: center;"></h2>
+<table style="align-items: center;">
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>AGE</th>
+        <th>TEAMID</th>
+        <th>Category</th>
+        <th>BiddingPrice</th>
+    </tr>
+    <tbody>
+        <tr *ngFor="let u of items">
+            <td>{{u.id}}</td>
+            <td>{{u.name}}</td>
+            <td>{{u.age}}</td>
+            <td>{{u.teamId}}</td>
+            <td>{{u.category}}</td>
+            <td>{{u.biddingPrice}}</td>
+
+        </tr>
+    </tbody>
+</table>

@@ -7,15 +7,11 @@ import { PlayerService } from '../player.service';
   styleUrls: ['./getdetail.component.css']
 })
 export class GetdetailComponent implements OnInit {
-  
-  constructor(private U:PlayerService) { }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-  this.U.GetAllPlayers().subscribe(data=>{
-    this.items=data;
-  })
-
+  items:any[]
+  constructor(private U:PlayerService) { 
+    this.U.GetAllPlayers().subscribe(data=>
+      this.items=data)
+    }
   ngOnInit(): void {
   }
 
