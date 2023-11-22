@@ -73,7 +73,7 @@ namespace dotnetapp.Controllers
             else  
                 return NotFound();            
  
-         }
+            }
  
         [HttpDelete]
         [Route("DeletePlayer/{id}")]
@@ -125,7 +125,7 @@ namespace dotnetapp.Controllers
  
             // db.Update(teamList         // db.SaveChanges();            
  
-         }
+        }
  
         [HttpDelete]
         [Route("DeleteTeam")]
@@ -140,8 +140,8 @@ namespace dotnetapp.Controllers
             }
             else
                 return NotFound();
-        }
+            }
  
        
     }
-}
+}   
