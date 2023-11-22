@@ -1,1 +1,30 @@
-<p>add-info works!</p>
+<p>student-post works!</p>
+<form (ngSubmit)="saveData(playerdata)" #playerform="ngForm">
+    <div>
+        <label for="id">ID</label>
+        <input [(ngModel)]="playerdata.id" type="text" id="id" name="id">
+    </div>
+    <div>
+        <label for="name">Name</label>
+        <input [(ngModel)]="playerdata.name" type="text" id="name" name="name">
+    </div>
+ 
+    <div>ID	NAME	AGE	TEAMID	Category	BiddingPrice
+        <label for="age">Age</label>
+        <input [(ngModel)]="playerdata.age" type="text" id="age" name="age">
+    </div>
+ 
+    <div>
+        <label for="category">Category</label>
+        <input [(ngModel)]="playerdata.category" type="number" id="category" name="category">
+    </div>
+    <div>
+        <label for="biddingPrice">BindingPrice</label>
+        <input [(ngModel)]="playerdata.biddingPrice" type="number" id="biddingPrice" name="biddingPrice">
+    </div>
+    
+    <div>
+        <button type="submit">save detail</button>
+    </div>
+ 
+</form>

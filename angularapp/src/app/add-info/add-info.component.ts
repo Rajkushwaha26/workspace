@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PlayerService } from '../player.service';
-import {}
+import { IPlayer } from 'src/models/data/iPlayer';
+
 
 @Component({
   selector: 'app-add-info',
@@ -23,3 +24,4 @@ export class AddInfoComponent implements OnInit {
   }
 
 }
+

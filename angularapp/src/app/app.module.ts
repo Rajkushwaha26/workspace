@@ -10,7 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { DeleteComponent } from './delete/delete.component';
 import { FindplayerComponent } from './findplayer/findplayer.component';
-import { CreateComponent } from './create/create.component';
+
 import { RegisterComponent } from './services/register/register.component';
 import { GetdetailComponent } from './getdetail/getdetail.component';
 import { AddInfoComponent } from './add-info/add-info.component';
@@ -24,7 +24,7 @@ import { AddInfoComponent } from './add-info/add-info.component';
     LoginComponent,
     DeleteComponent,
     FindplayerComponent,
-    CreateComponent,
+   
     RegisterComponent,
     GetdetailComponent,
     AddInfoComponent,
