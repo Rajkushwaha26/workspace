@@ -1,20 +1,14 @@
 <ul>
     <li><a href="default.asp">Home</a></li>
-    <li><a href="news.asp">News</a></li>
-    <li><a href="contact.asp">Contact</a></li>
-    <li><a [routerLink]="'login'">Login</a></li>
+    <li><a [routerLink] = "'login'" >Login</a></li>
+    <li><a [routerLink]="'findplayer'">Find ById</a></li>
+    <li><a [routerLink]="'getdetail'">Player Details</a></li>
+    <li> <a [routerLink]="'add-info'">Add Players</a></li>
+    <li> <a [routerLink]="'delete'">Delete Players</a></li>
   </ul>
 
-  <br>
-  <a [routerLink] = "'login'" >Login</a>
-  <br>
-  <a [routerLink]="'findplayer'">Find ById</a>
-  <br>
-  <a [routerLink]="'getdetail'">Player Details</a>
-  <br>
-  <a [routerLink]="'delete'">Delete Players</a>
-  <br>
-  <a [routerLink]="'add-info'">Add Players</a>
+  
+ 
  <!-- <app-player></app-player>  -->
 
   <router-outlet></router-outlet>
