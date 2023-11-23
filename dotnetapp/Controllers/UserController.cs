@@ -26,12 +26,6 @@ namespace dotnetapp.Controllers
             return Ok();
         }
 
-        public IActionResult Register(){
-            if(ModelState.IsValid){
-                return RedirectToAction("Login","User");
-            }
-            return Ok(User);
-        }
 
         public IActionResult Login(){
             if(ModelState.IsValid){
