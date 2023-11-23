@@ -9,14 +9,22 @@
         <label for="age">Age</label>
         <input [(ngModel)]="playerdata.age" type="text" id="age" name="age">
     </div>
+    <div>
+        <label for="teamId">TeamId</label>
+        <input [(ngModel)]="playerdata.teamId" type="number" id="teamId" name="teamId">
+    </div>
  
     <div>
         <label for="category">Category</label>
-        <input [(ngModel)]="playerdata.category" type="number" id="category" name="category">
+        <input [(ngModel)]="playerdata.category" type="text" id="category" name="category">
     </div>
     <div>
         <label for="biddingPrice">BindingPrice</label>
         <input [(ngModel)]="playerdata.biddingPrice" type="number" id="biddingPrice" name="biddingPrice">
+    </div>
+    <div>
+        <label for="biddingPrice">Teams</label>
+        <input [(ngModel)]="playerdata.teams" type="string" id="teams" name="teams">
     </div>
     
     <div>

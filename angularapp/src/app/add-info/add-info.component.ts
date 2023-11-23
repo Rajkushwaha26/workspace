@@ -12,8 +12,8 @@ export class AddInfoComponent implements OnInit {
 
   constructor(private U: PlayerService) { }
   playerdata:IPlayer={
-    id: 0, name: "", age: 0, teamId: 3, category: "", biddingPrice: 0,
-    teams: null
+    id: 0, name: "", age: 0, teamId: 0, category: "", biddingPrice: 0,
+    teams: ""
   }
   saveData(playerdata:IPlayer):void{
     console.log(playerdata);
