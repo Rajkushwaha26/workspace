@@ -16,8 +16,8 @@ export class AddInfoComponent implements OnInit {
     teams: ''
   }
   saveData(playerdata:IPlayer):void{
-    this.U.AddPlayer(playerdata).subscribe(()=>
-    alert('record save'))
+    this.U.AddPlayer(playerdata).subscribe(()=>{
+    alert('record save')})
   }
 
   ngOnInit(): void {

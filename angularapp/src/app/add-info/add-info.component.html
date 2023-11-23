@@ -1,10 +1,6 @@
 <p>student-post works!</p>
 <form (ngSubmit)="saveData(playerdata)" #playerform="ngForm">
     <div>
-        <label for="id">ID</label>
-        <input [(ngModel)]="playerdata.id" type="text" id="id" name="id">
-    </div>
-    <div>
         <label for="name">Name</label>
         <input [(ngModel)]="playerdata.name" type="text" id="name" name="name">
     </div>
@@ -24,7 +20,7 @@
     </div>
     
     <div>
-        <button type="submit">save detail</button>
+        <button class="btn btn-primary" type="submit">Save detail</button>
     </div>
  
 </form>
