@@ -8,11 +8,14 @@ import { IPlayer } from '../models/data/iPlayer';
 })
 export class PlayerService {
 
-  private url='https://8080-cfdbdbcbdfacbbecabcdadeafbbdcaeafe.premiumproject.examly.io/api/Admin';
+  private url='https://8080-cfdbdbcbdfacbbecabcdadeafbbdcaeafe.premiumproject.examly.io/Admin';
   // httpClient: any;
+  httpOptions:HttpHeaders;
+  constructor(private http:HttpClient) { 
 
-  constructor(private http:HttpClient) { }
-  httpOptions={headers:new HttpHeaders({'Content-type':'application/json'})}
+    this.httpOptions = new HttpHeaders({'Content-type':'application/json'})
+  }
+  
 
   //GetAllPlyers(Dispaly)
   GetAllPlayers():Observable<IPlayer[]>{
@@ -27,12 +30,13 @@ export class PlayerService {
 
   //create
   AddPlayer(playerdata:IPlayer):Observable<IPlayer>{
-    return this.http.post<IPlayer>(this.url+'/PostPlayers',playerdata,this.httpOptions)
+    console.log(playerdata);
+    return this.http.post<IPlayer>(this.url+'/PostPlayers',playerdata,{headers:this.httpOptions})
   }
 
   //editPlayer
   EditPlayer(id:number ,playerdata:IPlayer):Observable<IPlayer>{
-    return this.http.put<IPlayer>(this.url+'/PutPlayer'+id,playerdata,this.httpOptions)
+    return this.http.put<IPlayer>(this.url+'/PutPlayer'+id,playerdata,{headers:this.httpOptions})
   }
 
   //deletePlayer
